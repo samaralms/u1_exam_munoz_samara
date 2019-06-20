@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.811981510394855 -0.5774520567353828 -0.0850596787494885 0.358917060544876
-  position -0.7426910582303137 1.7549199955800794 2.5632525743667864
+  orientation -0.8103593011501706 -0.5832213086262102 -0.05630904193588983 0.23716725633108435
+  position -0.6948662031304291 1.3663804475235712 2.5275869889402345
 }
 TexturedBackground {
 }
@@ -143,7 +143,7 @@ Solid {
                                   size 0.01 0.01 0.2
                                 }
                               }
-                              Transform {
+                              DEF FINAL1 Transform {
                                 translation 0 0 0.1
                                 children [
                                   DEF FINAL Shape {
@@ -151,6 +151,127 @@ Solid {
                                     geometry Box {
                                       size 0.04 0.005 0.1
                                     }
+                                  }
+                                ]
+                              }
+                              DEF FINAL1 Transform {
+                                translation 0 0 -0.1
+                                children [
+                                  DEF FINAL Shape {
+                                    appearance USE YELLOW
+                                    geometry Box {
+                                      size 0.04 0.005 0.1
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                          DEF CAJITA2 Transform {
+                            translation 0 0.03 0
+                            rotation 0 1 0 1.57
+                            children [
+                              DEF PARADO Shape {
+                                appearance USE YELLOW
+                                geometry Box {
+                                  size 0.01 0.01 0.2
+                                }
+                              }
+                              DEF FINAL1 Transform {
+                                translation 0 0 0.1
+                                children [
+                                  DEF FINAL Shape {
+                                    appearance USE YELLOW
+                                    geometry Box {
+                                      size 0.04 0.005 0.1
+                                    }
+                                  }
+                                ]
+                              }
+                              DEF FINAL1 Transform {
+                                translation 0 0 -0.1
+                                children [
+                                  DEF FINAL Shape {
+                                    appearance USE YELLOW
+                                    geometry Box {
+                                      size 0.04 0.005 0.1
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                      Transform {
+                        rotation 0 1 0 0.7854
+                        children [
+                          DEF LIN1 Group {
+                            children [
+                              DEF CAJITA Transform {
+                                translation 0 0.03 0
+                                children [
+                                  DEF PARADO Shape {
+                                    appearance USE YELLOW
+                                    geometry Box {
+                                      size 0.01 0.01 0.2
+                                    }
+                                  }
+                                  DEF FINAL1 Transform {
+                                    translation 0 0 0.1
+                                    children [
+                                      DEF FINAL Shape {
+                                        appearance USE YELLOW
+                                        geometry Box {
+                                          size 0.04 0.005 0.1
+                                        }
+                                      }
+                                    ]
+                                  }
+                                  DEF FINAL1 Transform {
+                                    translation 0 0 -0.1
+                                    children [
+                                      DEF FINAL Shape {
+                                        appearance USE YELLOW
+                                        geometry Box {
+                                          size 0.04 0.005 0.1
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                              DEF CAJITA2 Transform {
+                                translation 0 0.03 0
+                                rotation 0 1 0 1.57
+                                children [
+                                  DEF PARADO Shape {
+                                    appearance USE YELLOW
+                                    geometry Box {
+                                      size 0.01 0.01 0.2
+                                    }
+                                  }
+                                  DEF FINAL1 Transform {
+                                    translation 0 0 0.1
+                                    children [
+                                      DEF FINAL Shape {
+                                        appearance USE YELLOW
+                                        geometry Box {
+                                          size 0.04 0.005 0.1
+                                        }
+                                      }
+                                    ]
+                                  }
+                                  DEF FINAL1 Transform {
+                                    translation 0 0 -0.1
+                                    children [
+                                      DEF FINAL Shape {
+                                        appearance USE YELLOW
+                                        geometry Box {
+                                          size 0.04 0.005 0.1
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               }
