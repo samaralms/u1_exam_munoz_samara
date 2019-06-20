@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.8103593011501706 -0.5832213086262102 -0.05630904193588983 0.23716725633108435
-  position -0.6948662031304291 1.3663804475235712 2.5275869889402345
+  orientation 0.10555157723470093 0.9872626376611245 0.1190434745026624 4.5796720931465
+  position -4.882181998029649 1.92035505369752 -0.2587995481739318
 }
 TexturedBackground {
 }
@@ -114,6 +114,25 @@ Solid {
               geometry Cylinder {
                 height 0.2
                 radius 0.05
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 0 1
+                anchor 0 -0.1 -0.02
+              }
+              endPoint Solid {
+                translation 0 -0.25 0
+                children [
+                  Shape {
+                    appearance USE YELLOW
+                    geometry Cylinder {
+                      height 0.3
+                      radius 0.02
+                    }
+                  }
+                ]
+                name "solid(1)"
               }
             }
             DEF BOLITA Transform {
