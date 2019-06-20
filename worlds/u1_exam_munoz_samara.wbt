@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.15254685525471784 0.941928240864239 0.29916658572490423 4.01685247661366
-  position -2.5783948590999746 2.769428050270307 -2.152961777770157
+  orientation -0.811981510394855 -0.5774520567353828 -0.0850596787494885 0.358917060544876
+  position -0.7426910582303137 1.7549199955800794 2.5632525743667864
 }
 TexturedBackground {
 }
@@ -77,6 +77,93 @@ Solid {
                 height 0.8
                 radius 0.02
               }
+            }
+          ]
+        }
+        DEF CUADRADO2 Transform {
+          translation 0 0.8 0
+          children [
+            Shape {
+              appearance USE PINK
+              geometry Box {
+                size 0.2 0.05 0.3
+              }
+            }
+          ]
+        }
+      ]
+    }
+    DEF PIVOTE Solid {
+      translation 0 0.9 0
+      children [
+        Shape {
+          appearance DEF YELLOW PBRAppearance {
+            baseColor 0.9294117647058824 0.8313725490196079 0
+          }
+          geometry Cylinder {
+            height 0.2
+            radius 0.02
+          }
+        }
+        DEF CYL2 Transform {
+          translation 0 0.13999999999999999 0.049999999999999996
+          rotation 1 0 0 1.57
+          children [
+            DEF CYL_2 Shape {
+              appearance USE YELLOW
+              geometry Cylinder {
+                height 0.2
+                radius 0.05
+              }
+            }
+            DEF BOLITA Transform {
+              translation 0 0.1 0
+              children [
+                Shape {
+                  appearance USE YELLOW
+                  geometry Sphere {
+                    radius 0.02
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 0
+                    anchor 0 0.03 0
+                  }
+                  endPoint Solid {
+                    children [
+                      DEF LIN1 Group {
+                        children [
+                          DEF CAJITA Transform {
+                            translation 0 0.03 0
+                            children [
+                              DEF PARADO Shape {
+                                appearance USE YELLOW
+                                geometry Box {
+                                  size 0.01 0.01 0.2
+                                }
+                              }
+                              Transform {
+                                translation 0 0 0.1
+                                children [
+                                  DEF FINAL Shape {
+                                    appearance USE YELLOW
+                                    geometry Box {
+                                      size 0.04 0.005 0.1
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
             }
           ]
         }
