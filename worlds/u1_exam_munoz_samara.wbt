@@ -1,14 +1,47 @@
 #VRML_SIM R2019a utf8
 WorldInfo {
-  info [
-  ]
 }
 Viewpoint {
-  orientation -0.7 0.7 0.2 0.75
-  position 1.2 1.6 2.3
-
+  orientation -0.04498129088154069 0.9944254194943635 0.09536649586772904 2.1995549460686035
+  position 2.983797061669958 1.3097526610979093 -2.179114633174188
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  children [
+    DEF BASE Group {
+      children [
+        DEF CUADRADO Transform {
+          translation 0 0.4125 0
+          children [
+            Shape {
+              appearance DEF PINK PBRAppearance {
+                baseColor 0.9900053406576639 0.5841000991836424 0.7283588921950103
+              }
+              geometry Box {
+                size 0.2 0.025 0.2
+              }
+            }
+          ]
+        }
+        DEF BARRA1 Transform {
+          translation 0.11 0.4 0.11
+          rotation 1 0 0 -0.2
+          children [
+            Shape {
+              appearance USE PINK
+              geometry Cylinder {
+                height 0.8
+                radius 0.02
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
