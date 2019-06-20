@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.21826751132825348 0.937883407582297 0.26969243089191375 4.440125994056639
-  position -3.8075394635198125 3.7286612955961957 -0.5908656175257037
+  position -3.8964004485484836 3.7856240688677985 -0.6098056650849645
 }
 TexturedBackground {
 }
@@ -116,10 +116,12 @@ Solid {
                 radius 0.05
               }
             }
-            HingeJoint {
+            DEF COLITA HingeJoint {
               jointParameters HingeJointParameters {
                 axis 0 0 1
                 anchor 0 -0.1 -0.02
+                minStop -0.2
+                maxStop 0.2
               }
               endPoint Solid {
                 translation 0 -0.25 0
@@ -130,6 +132,17 @@ Solid {
                       height 0.3
                       radius 0.02
                     }
+                  }
+                  Transform {
+                    translation 0 -0.2 0
+                    children [
+                      Shape {
+                        appearance USE YELLOW
+                        geometry Box {
+                          size 0.04 0.1 0.1
+                        }
+                      }
+                    ]
                   }
                 ]
                 name "solid(1)"
