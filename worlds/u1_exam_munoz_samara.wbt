@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.04498129088154069 0.9944254194943635 0.09536649586772904 2.1995549460686035
-  position 2.983797061669958 1.3097526610979093 -2.179114633174188
+  orientation 0.15254685525471784 0.941928240864239 0.29916658572490423 4.01685247661366
+  position -2.5783948590999746 2.769428050270307 -2.152961777770157
 }
 TexturedBackground {
 }
@@ -30,7 +30,46 @@ Solid {
         }
         DEF BARRA1 Transform {
           translation 0.11 0.4 0.11
-          rotation 1 0 0 -0.2
+          rotation 0.7071067811865475 0 -0.7071067811865475 -0.2
+          children [
+            Shape {
+              appearance USE PINK
+              geometry Cylinder {
+                height 0.8
+                radius 0.02
+              }
+            }
+          ]
+        }
+        DEF BARRA2 Transform {
+          translation 0.11 0.4 -0.11
+          rotation 0.7071067811865475 0 0.7071067811865475 0.2
+          children [
+            Shape {
+              appearance USE PINK
+              geometry Cylinder {
+                height 0.8
+                radius 0.02
+              }
+            }
+          ]
+        }
+        DEF BARRA3 Transform {
+          translation -0.11 0.4 -0.11
+          rotation -0.7071067811865475 0 0.7071067811865475 -0.2
+          children [
+            Shape {
+              appearance USE PINK
+              geometry Cylinder {
+                height 0.8
+                radius 0.02
+              }
+            }
+          ]
+        }
+        DEF BARRA3 Transform {
+          translation -0.11 0.4 0.11
+          rotation 0.7071067811865475 0 0.7071067811865475 -0.2
           children [
             Shape {
               appearance USE PINK
